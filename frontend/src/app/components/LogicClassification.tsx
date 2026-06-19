@@ -36,7 +36,7 @@ export function LogicClassification({ dark }: Props) {
 
     const response =
       await axios.post(
-        "http://127.0.0.1:8000/code/classify",
+        "https://ai-codeflow-backend.onrender.com/code/classify",
         {
           language: lang.toLowerCase(),
           code: code

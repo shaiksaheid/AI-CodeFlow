@@ -34,7 +34,7 @@ export function AlgorithmExplanations({ dark }: Props) {
 
     const response =
       await axios.post(
-        "http://127.0.0.1:8000/ai/explain-code",
+        "https://ai-codeflow-backend.onrender.com/ai/explain-code",
         {
           language: lang,
           code: code

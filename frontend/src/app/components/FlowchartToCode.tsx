@@ -122,7 +122,7 @@ export function FlowchartToCode({ dark }: Props) {
 
     const response =
       await axios.post(
-        "http://127.0.0.1:8000/ai/to-code",
+        "https://ai-codeflow-backend.onrender.com/ai/to-code",
         {
           language: lang,
           flowchart: flowchartText

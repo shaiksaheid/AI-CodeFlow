@@ -51,7 +51,7 @@ const [registerConfirmPassword,
 
     const response =
       await axios.post(
-        "http://127.0.0.1:8000/auth/login",
+        "https://ai-codeflow-backend.onrender.com/auth/login",
         {
           email,
           password
@@ -126,7 +126,7 @@ const handleRegister = async (
   try {
 
     await axios.post(
-      "http://127.0.0.1:8000/auth/register",
+      "https://ai-codeflow-backend.onrender.com/auth/register",
       {
         username:
           registerUsername,
@@ -347,7 +347,7 @@ const handleRegister = async (
 
     const response =
       await axios.post(
-        "http://127.0.0.1:8000/google/login",
+        "https://ai-codeflow-backend.onrender.com/google/login",
         {
           token:
             credentialResponse.credential
@@ -583,7 +583,7 @@ setTimeout(() => {
 
       const response =
         await axios.post(
-          "http://127.0.0.1:8000/google/login",
+          "https://ai-codeflow-backend.onrender.com/google/login",
           {
             token:
               credentialResponse.credential

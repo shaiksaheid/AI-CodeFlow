@@ -31,7 +31,7 @@ const fetchHistory = async () => {
 
     const response =
       await axios.get(
-        `http://127.0.0.1:8000/flowchart/user/${user.id}`
+        `https://ai-codeflow-backend.onrender.com/flowchart/user/${user.id}`
       );
 
     const historyData =
@@ -80,7 +80,7 @@ const remove = async (
   try {
 
     await axios.delete(
-      `http://127.0.0.1:8000/flowchart/${id}`
+      `https://ai-codeflow-backend.onrender.com/flowchart/${id}`
     );
 
     setSessions(

@@ -45,7 +45,7 @@ setMessageColor(
   try {
 
     await axios.post(
-      "http://127.0.0.1:8000/auth/register",
+      "https://ai-codeflow-backend.onrender.com/auth/register",
       {
         username:
           form.username,
@@ -157,7 +157,7 @@ setMessageColor(
 
         const response =
           await axios.post(
-            "http://127.0.0.1:8000/google/login",
+            "https://ai-codeflow-backend.onrender.com/google/login",
             {
               token:
                 credentialResponse.credential

@@ -278,16 +278,16 @@ export function CodeToFlowchart({ dark }: Props) {
     setLoading(true);
 
     const [flowchartResponse, explainResponse, classifyResponse] = await Promise.all([
-      axios.post("http://127.0.0.1:8000/flowchart/generate", {
+      axios.post("https://ai-codeflow-backend.onrender.com/flowchart/generate", {
         language: lang.toLowerCase(),
         code,
       }),
 
-      axios.post("http://127.0.0.1:8000/ai/explain-code", {
+      axios.post("https://ai-codeflow-backend.onrender.com/ai/explain-code", {
         language: lang.toLowerCase(),
         code,
       }),
-      axios.post("http://127.0.0.1:8000/code/classify", {
+      axios.post("https://ai-codeflow-backend.onrender.com/code/classify", {
         language: lang.toLowerCase(),
         code,
       }),
@@ -472,7 +472,7 @@ const saveFlowchart = async () => {
     );
 
     await axios.post(
-      "http://127.0.0.1:8000/flowchart/save",
+      "https://ai-codeflow-backend.onrender.com/flowchart/save",
       {
         user_id: user.id,
         title: "My Flowchart",
