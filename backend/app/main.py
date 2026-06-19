@@ -19,7 +19,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # later replace with frontend URL
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -37,9 +37,11 @@ def health():
         "status": "healthy"
     }
 
+
+app.include_router(google_auth.router)
+
 app.include_router(auth_router)
 
-Base.metadata.create_all(bind=engine)
 
 app.include_router(ml_router)
 
@@ -49,6 +51,7 @@ app.include_router(ai_router)
 
 app.include_router(flowchart_router)
 
-app.include_router(google_auth.router)
 
 app.include_router(flowchart.router)
+
+Base.metadata.create_all(bind=engine)
